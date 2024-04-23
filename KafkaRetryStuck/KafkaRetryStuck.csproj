@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="KafkaFlow.Extensions.Hosting" Version="3.0.7" />
+        <PackageReference Include="KafkaFlow.LogHandler.Microsoft" Version="3.0.7" />
+        <PackageReference Include="KafkaFlow.Microsoft.DependencyInjection" Version="3.0.7" />
+        <PackageReference Include="KafkaFlow.Serializer.NewtonsoftJson" Version="3.0.3"/>
+        <PackageReference Include="KafkaFlow.Retry" Version="3.0.1"/>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    </ItemGroup>
+
+</Project>

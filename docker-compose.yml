@@ -1,0 +1,28 @@
+version: "3"
+services:
+  kafka:
+    image: bitnami/kafka:latest
+    ports:
+      - "9092:9092"
+    volumes:
+      - "kafka:/bitnami/data"
+    environment:
+      KAFKA_CFG_BROKER_ID: 1
+      KAFKA_CFG_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CFG_ZOOKEEPER_CONNECT: zookeeper:2181
+      ALLOW_PLAINTEXT_LISTENER: yes
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://127.0.0.1:9092
+  zookeeper:
+    image: bitnami/zookeeper:latest
+    ports:
+      - "2181:2181"
+    volumes:
+      - "zookeeper:/bitnami/data"
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: yes
+      ZOO_4LW_COMMANDS_WHITELIST: srvr, mntr, dump, reqs, ruok, srst, stat
+      ZOO_MAX_CLIENT_CNXNS: 10000
+      ZOO_TICK_TIME: 10000
+volumes:
+  kafka:
+  zookeeper:

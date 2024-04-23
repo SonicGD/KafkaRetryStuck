@@ -1,0 +1,10 @@
+package.json            eol=LF
+bower.json              eol=LF
+webpack-assets.json     eol=LF
+*.sh                    eol=LF
+*.cs                    eol=CRLF
+*.sln                   eol=CRLF
+*.csproj                eol=CRLF
+*.targets               eol=CRLF
+*.cshtml                eol=CRLF
+frontend-tasks/docs/images/**/*.png filter=lfs diff=lfs merge=lfs -text
